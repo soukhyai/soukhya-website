@@ -416,8 +416,8 @@ a.active {
     }
 
     #bg-col-5 {
-        width: calc(100% - 80px);
-        left: 80px;
+        width: calc(100% - 90px);
+        left: 90px;
         /*transform: translateX(90px);*/
     }
 }
