@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SOUKHYA</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/song-logo-white.png" type="image/x-icon" id="light-scheme-icon">
+    <link rel="icon" href="img/song-logo.png" type="image/x-icon" id="dark-scheme-icon">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="ionicons/css/ionicons.min.css" rel="stylesheet"> -->
@@ -66,7 +67,7 @@
                 <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
                     <div class="title-bg">
                         <h1>SOUKHYA</h1>
-                        <h4>Artist • Influencer • Actress</h4>
+                        <h4>Singer • Influencer • Actress</h4>
                     </div>
                 </div>
             </div>
@@ -83,7 +84,7 @@
                 <div class="h-50"></div>
                 <p>SOUKHYA (pronounced Soak-yah) is in the Los Angeles area and has been singing/performing for over 23+ years. She learned Indian Classical Music for 15 years and continued to pursue music (Bollywood & Western) throughout her life and on her social media platforms. In March of 2020, she had the opportunity to sing in front of 20,000 people for the San Jose Sharks and officially became the First Indian American Woman to sing the National Anthem for the NHL.</p>
                 <p>SOUKHYA has also performed for the NCAA Basketball games at Purdue University & for Adobe’s CEO, Shantanu Narayen. During the pandemic, she created a singing TikTok account where she has over 500K+ supporters! Recently, SOUKHYA sang for the Warriors NBA game & acted in two full length movies. She also has a couple songs that you can stream on Spotify & Apple Music. Check out her new song  "Hypnotized"  ! SOUKHYA loves to connect with her audience and truly hopes to connect with other South Asian women through her music.</p>
-                <div class="h-50"></div> <img src="img/Signature.svg" width="230" alt="" />
+                <!-- <div class="h-50"></div> <img src="img/Signature.svg" width="230" alt="" /> -->
                 <div class="h-50"></div>
             </div>
             <div class="col-md-6 about-img-div">
@@ -283,21 +284,21 @@
                             <!-- single work -->
                             <div class="col-md-4 col-sm-6 tiktok">
                                 <div class="col-xs-6">
-                                    <a id="demo09" href="https://www.tiktok.com/@soukhyaa/video/7291325616283241774" target="_blank" class="portfolio_item">
-                                        <img src="img/tiktok-latest.jpeg" alt="image" class="img-responsive" />
+                                    <a id="demo09" href="https://www.tiktok.com/@soukhyaa/video/6926963450895731974" target="_blank" class="portfolio_item">
+                                            <img src="img/tiktok-trending-1.jpeg" alt="image" class="img-responsive" />
                                         <div class="portfolio_item_hover even">
                                             <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>TikTok Posts</span> <p>Latest TikTok hits</p> </div>
+                                                <div class="item_info"> <span>TikTok Trending</span> <p>Latest Trending TikToks from SOUKHYA</p> </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col-xs-6">
-                                    <a id="demo09" href="https://www.tiktok.com/@soukhyaa/video/7291325616283241774" target="_blank" class="portfolio_item">
-                                        <img src="img/tiktok-latest-2.jpeg" alt="image" class="img-responsive" />
+                                    <a id="demo09" href="https://www.tiktok.com/@soukhyaa/video/6926963450895731974" target="_blank" class="portfolio_item">
+                                        <img src="img/tiktok-trending-2.jpeg" alt="image" class="img-responsive" />
                                         <div class="portfolio_item_hover even">
                                             <div class="portfolio-border clearfix">
-                                                <div class="item_info"> <span>TikTok Posts</span> <p>Latest TikTok hits</p> </div>
+                                                <div class="item_info"> <span>TikTok Trending</span> <p>Latest Trending TikToks from SOUKHYA</p> </div>
                                             </div>
                                         </div>
                                     </a>
@@ -352,9 +353,9 @@
             <div class="col-md-4" data-aos="fade-up">
 
                 <h3>Phone Number</h3>
-                <p>+1 (510)-676-5532</p>
+                <p>+1 (510) 676-5532</p>
                 <h3>Email</h3>
-                <p>soukhya.inamdar@gmail.com</p>
+                <p>soukhyaofficial@gmail.com</p>
 
                 <h3>Social Network</h3>
 
@@ -422,6 +423,25 @@
 
     <!--  main script  -->
     <script src="js/custom.js"></script>
+    <script>
+        const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+        const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+
+        function onUpdate() {
+          if (!matcher.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+          } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
+          }
+        }
+
+        const matcher = window.matchMedia('(prefers-color-scheme: dark)');
+        matcher.addListener(onUpdate);
+        onUpdate();
+    </script>
 </body>
 
 </html>
