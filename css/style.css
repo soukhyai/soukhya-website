@@ -416,8 +416,12 @@ a.active {
     }
 
     #bg-col-5 {
-        width: calc(100% - 90px);
-        left: 90px;
+        /*width: calc(100% - 100px);*/
+        background: url(../img/akfotos-01857-min-1.jpg) 50%;
+        background-size: cover;
+        width: 50%;
+        /*left: 100px;*/
+        right: 0;
         /*transform: translateX(90px);*/
     }
 }
